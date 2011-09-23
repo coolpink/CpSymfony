@@ -1,0 +1,36 @@
+---
+detect_relations: true
+options:
+  collate: latin1_swedish_ci
+  charset: latin1
+  type: InnoDB
+
+HomePage:
+  actAs:
+    Cmsable:
+      allowedChildren: [ContentPage]
+  tableName: home_page
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    content:
+      type: clob(65535)
+
+ContentPage:
+  actAs:
+    Cmsable:
+      allowedChildren: [ContentPage]
+  tableName: content_page
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    content:
+      type: clob(65535)
+      notnull: true
+

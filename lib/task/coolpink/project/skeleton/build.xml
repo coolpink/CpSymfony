@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="%projectName%" default="build" basedir=".">
+  <property name="codestandard" value="Symfony" />
+  <property name="ignorepaths" value="%unitIgnorePaths%" />
+  <property name="cpdignorepaths" value="%cpdIgnorePaths%" />
+  <property name="docignorepaths" value="%docIgnorePaths%" />
+  <import file="../common-targets.xml" />
+  <target name="build" depends="prepare,clean,svn,clearcache,symfony-build,symfony-plugin-publish,parallel,phpunitsymfony,count" />
+  <target name="parallel">
+    <parallel>
+      <antcall target="php-documentor" />
+      <antcall target="php-codesniffer" />
+      <antcall target="phpmd" />
+      <antcall target="phpcpd" />
+    </parallel>
+  </target>
+</project>

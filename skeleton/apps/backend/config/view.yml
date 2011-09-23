@@ -1,0 +1,34 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    #title:        symfony project
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:
+    - main.css
+    - /sfDoctrineJCroppablePlugin/css/jquery.Jcrop.css
+    - /cpAdminGeneratorPlugin/css/interface.css
+    - /cpAdminGeneratorPlugin/css/tree.css
+    - /cpAdminGeneratorPlugin/css/cms.css
+
+  javascripts:
+    - /cpAdminGeneratorPlugin/js/jquery.min.js
+    - http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js
+    - /cpAdminGeneratorPlugin/js/admin_menu.js
+    - /cpAdminGeneratorPlugin/js/jquery.scrollTo-min.js
+    - /cpAdminGeneratorPlugin/js/jquery.jeegoocontext.min.js
+    - /cpFormsPlugin/js/tiny_mce/tiny_mce.js
+    - /sfDoctrineJCroppablePlugin/js/jquery.Jcrop.min.js
+    - /cpAdminGeneratorPlugin/js/jquery.bar.js
+    - /cpMediaBrowserPlugin/js/WindowManager.js
+
+  has_layout:     true
+  layout:         layout
